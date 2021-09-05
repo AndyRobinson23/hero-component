@@ -16,6 +16,11 @@ html {
 
 header {
     height: 100vh;
+    position: relative;
+
+    background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url(hero.jpeg);
+    background-size: cover;
+    color: #fff;
 }
 
 nav {
@@ -23,11 +28,30 @@ nav {
     font-weight: 700;
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* Utility class added solely to keep the H1 and button centred regardless of screen size */
+.header-container {
+    width: 1200px;
+    position: absolute;
+
+    /* In relation to PARENT size */
+    left: 50%;
+    top: 50%;
+
+    /* In relation to ELEMENT size */
+    transform: translate(-50%, -50%);
+}
+
+.header-container-inner {
+    width: 50%;
 }
 
 h1 {
     font-size: 52px;
     margin-bottom: 32px;
+    line-height: 1.05;
 }
 
 p {
